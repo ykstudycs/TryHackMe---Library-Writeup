@@ -238,7 +238,7 @@ This behavior can sometimes be abused through **Python Library Hijacking**.
 
 ---
 
-# 💣 Step 9: Python Library Hijacking
+#  Step 9: Python Library Hijacking
 
 Since the script imports `zipfile`, I created my own malicious module named:
 
@@ -305,7 +305,7 @@ The root flag was successfully retrieved.
 
 ---
 
-# 🏁 Conclusion
+#  Conclusion
 
 This room demonstrates how small pieces of information gathered during enumeration can be chained together to compromise a system:
 
@@ -321,7 +321,7 @@ This room demonstrates how small pieces of information gathered during enumerati
 
 ---
 
-# 🛠️ Tools Used
+#  Tools Used
 
 - Nmap
 - Gobuster
