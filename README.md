@@ -1,10 +1,10 @@
-# 📚 TryHackMe - Library Write-Up
+#  TryHackMe - Library Write-Up
 
 A complete walkthrough of the **Library** room on TryHackMe. This room focuses on basic enumeration, SSH brute-forcing, web directory discovery, and privilege escalation through **Python Library Hijacking**.
 
 ---
 
-# 📌 Room Information
+#  Room Information
 
 | Category | Details |
 |-----------|-----------|
@@ -15,7 +15,7 @@ A complete walkthrough of the **Library** room on TryHackMe. This room focuses o
 
 ---
 
-# 🎯 Learning Objectives
+#  Learning Objectives
 
 During this room, I practiced:
 
@@ -28,7 +28,7 @@ During this room, I practiced:
 
 ---
 
-# 🔍 Step 1: Network Scanning
+#  Step 1: Network Scanning
 
 The first step was to identify open ports and running services on the target machine.
 
@@ -55,7 +55,7 @@ Since a web server was available, I started with web enumeration.
 
 ---
 
-# 🌐 Step 2: Web Enumeration
+#  Step 2: Web Enumeration
 
 I visited the website running on port 80 and reviewed the page source code.
 
@@ -73,7 +73,7 @@ This username would later become useful during the SSH attack.
 
 ---
 
-# 📂 Step 3: Directory Enumeration
+#  Step 3: Directory Enumeration
 
 Since the website did not reveal much information, I used **Gobuster** to discover hidden files and directories.
 
@@ -112,7 +112,7 @@ Although this did not directly lead to exploitation, it provided additional info
 
 ---
 
-# 🔑 Step 4: SSH Brute Force
+#  Step 4: SSH Brute Force
 
 At this stage we had:
 
@@ -143,7 +143,7 @@ Password: iloveyou_
 
 ---
 
-# 🔓 Step 5: SSH Access
+#  Step 5: SSH Access
 
 Using the discovered credentials, I connected to the target machine.
 
@@ -161,7 +161,7 @@ I gained access as the user **meliodas**.
 
 ---
 
-# 🚩 Step 6: User Flag
+#  Step 6: User Flag
 
 After logging in, I searched the user's home directory and located the user flag.
 
@@ -173,7 +173,7 @@ The user flag was successfully retrieved.
 
 ---
 
-# ⬆️ Step 7: Privilege Escalation Enumeration
+#  Step 7: Privilege Escalation Enumeration
 
 The next objective was to obtain root access.
 
@@ -208,7 +208,7 @@ This was a strong privilege escalation opportunity.
 
 ---
 
-# 🔎 Step 8: Analyzing the Python Script
+#  Step 8: Analyzing the Python Script
 
 I inspected the backup script.
 
@@ -263,7 +263,7 @@ When Python tries to load the `zipfile` module:
 
 ---
 
-# 🚀 Step 10: Execute the Vulnerable Script
+#  Step 10: Execute the Vulnerable Script
 
 Now I triggered the allowed sudo command.
 
@@ -275,7 +275,7 @@ Because Python loaded our malicious module, a root shell was spawned.
 
 ---
 
-# 👑 Step 11: Root Access
+#  Step 11: Root Access
 
 Verifying privileges:
 
@@ -293,7 +293,7 @@ Successful privilege escalation!
 
 ---
 
-# 🚩 Step 12: Root Flag
+#  Step 12: Root Flag
 
 With root privileges obtained, I accessed the final flag.
 
