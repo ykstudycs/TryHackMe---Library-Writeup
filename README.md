@@ -140,6 +140,7 @@ Hydra successfully discovered the password:
 Username: meliodas
 Password: iloveyou_
 ```
+<img width="952" height="403" alt="hydra" src="https://github.com/user-attachments/assets/e9f4a6db-9bae-4bea-b2ee-4d7eda06bc3e" />
 
 ---
 
@@ -159,7 +160,12 @@ iloveyou_
 
 I gained access as the user **meliodas**.
 
+<img width="877" height="407" alt="Screenshot_2026-06-08_03-11-09" src="https://github.com/user-attachments/assets/bdc1bc91-4d43-4ef1-924e-1e3651ec139c" />
+
+
+
 ---
+
 
 #  Step 6: User Flag
 
@@ -215,6 +221,8 @@ I inspected the backup script.
 ```bash
 cat /home/meliodas/bak.py
 ```
+<img width="816" height="291" alt="bak" src="https://github.com/user-attachments/assets/d0d5f372-a2e3-4379-8992-1a70db8e22cd" />
+
 
 Inside the script, I noticed:
 
@@ -290,6 +298,7 @@ uid=0(root) gid=0(root) groups=0(root)
 ```
 
 Successful privilege escalation!
+<img width="938" height="392" alt="root1" src="https://github.com/user-attachments/assets/4631eb1c-ef2c-4841-8715-2a0c2c3dde52" />
 
 ---
 
